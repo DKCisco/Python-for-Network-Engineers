@@ -1,0 +1,19 @@
+# three hypens = yaml file
+# ---
+
+---
+
+BGP:
+    ASN: "65001"
+    peers:
+        - neighbor: "10.0.0.1"
+          peer_asn: "65002"
+
+        - neighbor: "10.0.0.2"
+          peer_asn: "65003"
+
+        - neighbor: "10.0.0.4"
+          peer_asn: "65004"
+
+        - neighbor: "10.0.0.5"
+          peer_asn: "65005"
