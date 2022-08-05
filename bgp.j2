@@ -1,3 +1,6 @@
 router bgp {{ BGP.ASN }}
+{% for nbor in BGP.peers %}
+neighbor {{ nbor ["neighbor"]}} remote-as {{ nbor ["peer_asn"] }}
+neighbor {{ nbor ["neighbor"]}} update-source looback 0 
+{% endfor %}
 
- 
