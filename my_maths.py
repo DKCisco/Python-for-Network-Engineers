@@ -10,4 +10,3 @@ def subtractor(a,b):
 
 def the_multiplier(a,b):
     return a * b #returns a * b
-
