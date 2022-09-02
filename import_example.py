@@ -9,3 +9,6 @@ from scrapli.driver.core import IOSXEDriver
 #Local imports
 from my_maths import the_multiplier
 
+import structure_example
+
+structure_example.say_hello()

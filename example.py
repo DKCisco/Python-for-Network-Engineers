@@ -8,5 +8,3 @@ MY_THRESHOLD = 0
 
 class TestNetworkState:
     pass
-
-

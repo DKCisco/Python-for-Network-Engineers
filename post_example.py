@@ -11,7 +11,7 @@ my_url = "https://gorest.co.in/public/v2/users"
 payload = {
     "name":"Bob Smith", 
     "gender":"male", 
-    "email":"bob.smith@15ce.com", 
+    "email":"bob.smith11@15ce.com", 
     "status":"active"
 }
 
