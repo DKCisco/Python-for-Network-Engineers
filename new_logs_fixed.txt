@@ -1,0 +1,105 @@
+DEBUG:scrapli.channel:read: b'ssh: connect to host 192.168.50.21 port 22: Connection timed out\n'
+CRITICAL:scrapli.channel:Timed out connecting to host
+DEBUG:scrapli.driver:attempting to resolve 'ssh_config_file' file
+DEBUG:scrapli.driver:using '/etc/ssh/ssh_config' as resolved 'ssh_config_file' file'
+DEBUG:scrapli.driver:load core transport requested
+DEBUG:scrapli.driver:core transport 'system' loaded successfully
+DEBUG:scrapli.driver:generating combined network comms prompt pattern
+DEBUG:scrapli.driver:setting 'comms_prompt_pattern' value to '(^[\w.\-@/:]{1,63}>$)|(^[\w.\-@/:]{1,63}#$)|(^[\w.\-@/:]{1,63}\([\w.\-@/:+]{0,32}\)#$)|(^([\w.\-@/+>:]+\(tcl\)[>#]|\+>)$)'
+INFO:scrapli.driver:opening connection to '192.168.50.21' on port '22'
+DEBUG:scrapli.transport:opening transport connection to '192.168.50.21' on port '22'
+DEBUG:scrapli.transport:created transport 'open_cmd': '['ssh', '192.168.50.21', '-p', '22', '-o', 'ConnectTimeout=15', '-o', 'ServerAliveInterval=30', '-l', 'ds_local_netadmin', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-F', '/etc/ssh/ssh_config']'
+DEBUG:scrapli.transport:transport connection to '192.168.50.21' on port '22' opened successfully
+DEBUG:scrapli.channel:attempting in channel ssh authentication
+DEBUG:scrapli.channel:read: b"Warning: Permanently added '192.168.50.21' (RSA) to the list of known hosts.\n"
+DEBUG:scrapli.channel:read: b''
+DEBUG:scrapli.channel:read: b'(ds_local_netadmin@192.168.50.21) Password: '
+DEBUG:scrapli.channel:write: REDACTED
+DEBUG:scrapli.channel:write: '\n'
+DEBUG:scrapli.channel:read: b'\n'
+DEBUG:scrapli.channel:read: b'CC\n*********************************************************************\nUNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED\n*********************************************************************\n'
+DEBUG:scrapli.channel:read: b'DS-GNS3-R1>'
+DEBUG:scrapli.channel:write: '\n'
+DEBUG:scrapli.channel:read: b'\n'
+DEBUG:scrapli.channel:read: b'DS-GNS3-R1>'
+INFO:scrapli.driver:attempting to acquire 'privilege_exec' privilege level
+DEBUG:scrapli.driver:determined current privilege level is one of '['exec']'
+DEBUG:scrapli.driver:determined privilege escalation necessary
+INFO:scrapli.channel:sending interactive input: enable; expecting: ^(?:enable\s){0,1}password:\s?$; hidden_input: False
+DEBUG:scrapli.channel:write: 'enable'
+DEBUG:scrapli.channel:read: b'e'
+DEBUG:scrapli.channel:read: b'n'
+DEBUG:scrapli.channel:read: b'a'
+DEBUG:scrapli.channel:read: b'b'
+DEBUG:scrapli.channel:read: b'l'
+DEBUG:scrapli.channel:read: b'e'
+DEBUG:scrapli.channel:write: '\n'
+DEBUG:scrapli.channel:read: b'\n'
+DEBUG:scrapli.channel:read: b'Password: '
+INFO:scrapli.channel:sending interactive input: REDACTED; expecting: ^[\w.\-@/:]{1,63}#$; hidden_input: True
+DEBUG:scrapli.channel:write: REDACTED
+DEBUG:scrapli.channel:write: '\n'
+DEBUG:scrapli.channel:read: b'\nDS-GNS3-R1#'
+DEBUG:scrapli.channel:write: '\n'
+DEBUG:scrapli.channel:read: b'\n'
+DEBUG:scrapli.channel:read: b'DS-GNS3-R1#'
+INFO:scrapli.driver:attempting to acquire 'privilege_exec' privilege level
+DEBUG:scrapli.driver:determined current privilege level is one of '['privilege_exec']'
+DEBUG:scrapli.driver:determined current privilege level is target privilege level, no action needed
+INFO:scrapli.channel:sending channel input: terminal length 0; strip_prompt: True; eager: False
+DEBUG:scrapli.channel:write: 'terminal length 0'
+DEBUG:scrapli.channel:read: b't'
+DEBUG:scrapli.channel:read: b'e'
+DEBUG:scrapli.channel:read: b'r'
+DEBUG:scrapli.channel:read: b'm'
+DEBUG:scrapli.channel:read: b'i'
+DEBUG:scrapli.channel:read: b'n'
+DEBUG:scrapli.channel:read: b'a'
+DEBUG:scrapli.channel:read: b'l'
+DEBUG:scrapli.channel:read: b' '
+DEBUG:scrapli.channel:read: b'l'
+DEBUG:scrapli.channel:read: b'e'
+DEBUG:scrapli.channel:read: b'n'
+DEBUG:scrapli.channel:read: b'g'
+DEBUG:scrapli.channel:read: b't'
+DEBUG:scrapli.channel:read: b'h'
+DEBUG:scrapli.channel:read: b' '
+DEBUG:scrapli.channel:read: b'0'
+DEBUG:scrapli.channel:write: '\n'
+DEBUG:scrapli.channel:read: b'\n'
+DEBUG:scrapli.channel:read: b'DS-GNS3-R1#'
+INFO:scrapli.channel:sending channel input: terminal width 512; strip_prompt: True; eager: False
+DEBUG:scrapli.channel:write: 'terminal width 512'
+DEBUG:scrapli.channel:read: b't'
+DEBUG:scrapli.channel:read: b'e'
+DEBUG:scrapli.channel:read: b'r'
+DEBUG:scrapli.channel:read: b'm'
+DEBUG:scrapli.channel:read: b'i'
+DEBUG:scrapli.channel:read: b'n'
+DEBUG:scrapli.channel:read: b'a'
+DEBUG:scrapli.channel:read: b'l'
+DEBUG:scrapli.channel:read: b' '
+DEBUG:scrapli.channel:read: b'w'
+DEBUG:scrapli.channel:read: b'i'
+DEBUG:scrapli.channel:read: b'd'
+DEBUG:scrapli.channel:read: b't'
+DEBUG:scrapli.channel:read: b'h'
+DEBUG:scrapli.channel:read: b' '
+DEBUG:scrapli.channel:read: b'5'
+DEBUG:scrapli.channel:read: b'1'
+DEBUG:scrapli.channel:read: b'2'
+DEBUG:scrapli.channel:write: '\n'
+DEBUG:scrapli.channel:read: b'\n'
+DEBUG:scrapli.channel:read: b'DS-GNS3-R1#'
+INFO:scrapli.driver:connection to '192.168.50.21' on port '22' opened successfully
+INFO:scrapli.driver:closing connection to '192.168.50.21' on port '22'
+DEBUG:scrapli.channel:write: '\n'
+DEBUG:scrapli.channel:read: b'\n'
+DEBUG:scrapli.channel:read: b'DS-GNS3-R1#'
+INFO:scrapli.driver:attempting to acquire 'privilege_exec' privilege level
+DEBUG:scrapli.driver:determined current privilege level is target privilege level, no action needed
+DEBUG:scrapli.channel:write: 'exit'
+DEBUG:scrapli.channel:write: '\n'
+DEBUG:scrapli.transport:closing transport connection to '192.168.50.21' on port '22'
+DEBUG:scrapli.transport:transport connection to '192.168.50.21' on port '22' closed successfully
+INFO:scrapli.driver:connection to '192.168.50.21' on port '22' closed successfully
