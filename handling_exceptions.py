@@ -1,7 +1,8 @@
+from typing import Dict, List, Optional, Any
 from scrapli.driver.core import IOSXEDriver
 from inv import DEVICES
 
-def find_macs(structure_result):
+def find_macs(structure_result: Dict[str, Any]) -> Optional[List[str]]:
     my_mac = []
     for interface in structure_result:
         try:
@@ -10,7 +11,7 @@ def find_macs(structure_result):
             pass
     return my_mac
 
-def send_cmd(device):
+def send_cmd(device: Dict) -> Dict[List[str, Any]]:
     with IOSXEDriver(
         host=device["host"],
         auth_username = "ds_local_netadmin",
